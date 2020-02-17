@@ -1,3 +1,4 @@
+import "./header.style.scss";
 import React, { useContext } from "react";
 import RootDispatchContext from "../../hooks/contexts/app/root-dispatch.ctx";
 import RootStateContext from "../../hooks/contexts/app/root-state.ctx";
@@ -19,14 +20,13 @@ function Header(props) {
     }
 
     return (
-        <header style={{
-            background: appStateContext.theme.headerBlackBGColor
-        }}>
-            <label>DarkTheme</label>
+        <header className="header">
+            <a>Hello Socket</a>
+            {/* <label>DarkTheme</label>
             <input
                 onChange={handleChange}
                 type="checkbox" 
-                name="theme" />
+                name="theme" /> */}
         </header>
     );
 }
