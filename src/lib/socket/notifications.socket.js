@@ -1,7 +1,7 @@
 const io = require('socket.io-client')
 
-export default function () {
-    const socket = io.connect('http://localhost:4000?token=hskhfds5656fwrew&id=001');
+export default function ({ userName, id }) {
+    const socket = io.connect(`http://localhost:4000?token=hskhfds5656fwrew&userName=${userName}&id=${id}`);
 
     function emitMessage(data) {
         socket.emit('message', {
